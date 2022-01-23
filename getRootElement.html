@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">  //Phải thêm type="text/babel" để nó hiểu đây là JSX
+        const courses = [
+            {name: 'HTML, CSS'},
+            {name: 'Responsive web design'},
+            {name: 'ReactJS'}
+        ]
+        const jsx = (
+        <ul>
+            {courses.map((courses, index) => 
+                <li key={index}>{courses.name}</li>  //React.createElement('li', null, course.name)
+        )}
+            
+            </ul>)
+        ReactDOM.render(jsx, root)
+    </script>
+    <!-- 
+        <script type="text/babel">  //Phải thêm type="text/babel" để nó hiểu đây là JSX
+        const ulReact = <ul>
+            <li>Javascipt</li>
+            <li>ReactJS</li>
+            </ul>
+        ReactDOM.render(ulReact, root)
+    </script> -->
+    <!-- JSX - Javascript XML dùng để lồng html vào JS -->
+
+
+
+    <!-- <script>
+        const ulReact = React.createElement(
+            'ul',
+            null,
+            React.createElement('li', null, 'Javascript'),
+            React.createElement('li', null, 'ReactJS'),
+
+        )
+        const root = document.getElementById('root')
+        ReactDOM.render(ulReact, root)
+    </script> -->
+</body>
+</html>

@@ -27,6 +27,11 @@
 //  };
 //  console.log (cource)
 
+// 8. Destructurings  //Phân rã
+// var array = ['Javascript', 'Ruby', 'PHP']
+// var [a, , c] = array;  // Bỏ thằng b ra, phân tách từng phần tử ra
+// console.log (a, c)
+
 //   9. Rest parameter // Lấy những phần tử còn lại
 //   Vd. function logger(a, b,  ...params){
 //       console.log(params);  // Còn lại => [3, 4]
@@ -35,13 +40,9 @@
 
 
 // 10. Spead  // Nối các phẩn tử/ mảng lại với nhau và bỏ dấu []
-// Vd. 
-var array1 = ['Javascript', 'Ruby', 'PHP']
-var array2 = ['ReactJS', 'Dart']
-var array3 = [...array1, ...array2]
-console.log (array3)
-
-
-
+// Vd. var array1 = ['Javascript', 'Ruby', 'PHP']
+// var array2 = ['ReactJS', 'Dart']
+// var array3 = [...array1, ...array2]
+// console.log (array3)
 
 
