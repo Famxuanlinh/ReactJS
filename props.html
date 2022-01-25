@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
+
 <body>
     <!-- 
     Props
@@ -31,52 +33,58 @@
 
     <div id="root"></div>
     <script type="text/babel">
-    function PostItem(props) {
-        return (
-            <div className="post-item">
-                <img 
-                    src={props.image}
-                    alt={props.title}
-                />
-                <h2 className="post-title">{props.title}</h2>
-                <div className="post-desc">{props.description}</div>
-                <div className="pOst-published">{props.publishAt}</div>
-            </div>
-        ) 
-    } 
+        function PostItem({
+            image,
+            title,
+            description,
+            publishAt,
+        }) {
+            return (
+                <div className="post-item">
+                    <img
+                        src={image}
+                        alt={title}
+                    />
+                    <h2 className="post-title">{title}</h2>
+                    <div className="post-desc">{description}</div>
+                    <div className="post-published">{publishAt}</div>
+                </div>
+            )
+        }
 
 
 
-    //App.js
-    function App(){
-       return (
-           <div id="wrapper">
-                <PostItem
-                    title="1 C#(.NET) - Tương tác với file Exel"
-                    image="https://200lab-blog.imgix.net/2021/07/1_h5UGPzaL1E4dIy_JWDrsAw.png"
-                    description="1 Khóa học sẽ cùng đồng hành với Mr Sơn"
-                    publishAt="1 Một ngày trước"
-                />
-                <PostItem
-                    title="2 C#(.NET) - Tương tác với file Exel"
-                    image="https://200lab-blog.imgix.net/2021/07/1_h5UGPzaL1E4dIy_JWDrsAw.png"
-                    description="2 Khóa học sẽ cùng đồng hành với Mr Sơn"
-                    publishAt="2 Một ngày trước"
-                />
-                <PostItem
-                    title="3 C#(.NET) - Tương tác với file Exel"
-                    image="https://200lab-blog.imgix.net/2021/07/1_h5UGPzaL1E4dIy_JWDrsAw.png"
-                    description="3 Khóa học sẽ cùng đồng hành với Mr Sơn"
-                    publishAt="3 Một ngày trước"
-                />
-            </div>
-       )
-    }
-    ReactDOM.render(<App />,document.getElementById('root')) 
-    
-    
+        //App.js
+        function App() {
+            return (
+                <div id="wrapper">
+                    <PostItem
+                        title="1 C#(.NET) - Tương tác với file Exel"
+                        image="https://200lab-blog.imgix.net/2021/07/1_h5UGPzaL1E4dIy_JWDrsAw.png"
+                        description="1 Khóa học sẽ cùng đồng hành với Mr Sơn"
+                        publishAt="1 Một ngày trước"
+                    />
+                    <PostItem
+                        title="2 C#(.NET) - Tương tác với file Exel"
+                        image="https://200lab-blog.imgix.net/2021/07/1_h5UGPzaL1E4dIy_JWDrsAw.png"
+                        description="2 Khóa học sẽ cùng đồng hành với Mr Sơn"
+                        publishAt="2 Một ngày trước"
+                    />
+                    <PostItem
+                        title="3 C#(.NET) - Tương tác với file Exel"
+                        image="https://200lab-blog.imgix.net/2021/07/1_h5UGPzaL1E4dIy_JWDrsAw.png"
+                        description="3 Khóa học sẽ cùng đồng hành với Mr Sơn"
+                        publishAt="3 Một ngày trước"
+                    />
+                </div>
+            )
+        }
+        ReactDOM.render(<App />, document.getElementById('root'))
+
+
 
     </script>
 
 </body>
+
 </html>
