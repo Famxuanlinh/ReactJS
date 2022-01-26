@@ -87,7 +87,7 @@
 
         const CourseItem = ({course}) => (  // ({course}) -> distruring
             <div>
-                <h2>{course.title}</h2>
+                <h2 onClick={() => console.log(course.title)}>{course.title}</h2>
                 <img src={course.image_url} />
                 <p>{course.description}</p>
                 <p>{course.studentsCount}</p>
